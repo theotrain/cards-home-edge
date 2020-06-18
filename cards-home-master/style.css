@@ -613,27 +613,11 @@ body {
 }
 
 @supports (-ms-ime-align:auto) {
-  .card-outer { background-color: red; }
   .card {
     transition-property: left, top, transform;
     transition-duration: 1s, 1s, 0s;
     transform-style:none;
   }
-  /* #c1.is-flipped, #c2.is-flipped, #c3.is-flipped, #c4.is-flipped {
-    transform: rotateY(180deg);
-  } */
-  /* #c1.is-flipped {
-    transform: translateZ(1px) rotateY(0deg) rotate(8deg);
-  }
-  #c2.is-flipped {
-    transform: translateZ(1px) rotateY(0deg) rotate(4deg);
-  }
-  #c3.is-flipped {
-    transform: translateZ(1px) rotateY(0deg) rotate(1deg);
-  }
-  #c4.is-flipped {
-    transform: translateZ(1px) rotateY(0deg) rotate(0);
-  } */
   #c1 {
     transform: rotateY(180deg) rotate(8deg);
   }
