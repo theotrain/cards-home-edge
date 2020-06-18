@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Conversation Cards</title>
+  <meta name="description" content="Conversation Cards">
+  <!-- <meta name="author" content="SitePoint"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css-reset.css">
+  <style>
+    body {
+      background-color: pink;
+      box-sizing: border-box;
+    }
+    #card {
+      width: 260px;
+      /* background-size: cover; */
+      transition-property: left, top, transform;
+  transition-duration: 1s, 1s, 0.65s;
+  /* transition: left 1s ease-out; */
+  /* transition: top 1s ease-out; */
+  transform-style: preserve-3d;
+      -webkit-transform: rotate(3deg);
+    }
+    .trans {
+      
+    }
+    .clicked {
+      border: 2px solid red;
+      transform: rotateY(180deg);
+      -webkit-transform: translate3d(10px,0,1px);
+      transition-property: left, top, transform;
+      transition-duration: 1s, 1s, 0.65s;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="card" class="trans">
+    <img src="card3-texture.jpg" />
+  </div>
+  <!-- <div id="image" src="card2-texture.jpg" /> -->
+  <script src="jquery-3.4.1.min.js"></script>
+  <script>
+    $('#card').on('click', function() {
+      $(this).toggleClass('clicked');
+    });
+  </script>
+</body>
+</html>
